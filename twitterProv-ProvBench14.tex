@@ -1,4 +1,4 @@
-\documentclass{llncs2e/llncs}
+\documentclass{llncs}
  
 \input{preamble}
 
@@ -18,14 +18,14 @@
 %
 We describe a large synthetic corpus\footnote{https://github.com/provbench/Twitter-PROV} of PROV data, designed to represent the provenance of artefacts and interactions by users of the popular social network Twitter\footnote{https://twitter.com/}.
 %
-The data is topologically valid with respect to the PROV data model\cite{PROV-DM}, and serialised using the PROV-N notation\cite{PROV-N}.
+The data is topologically valid with respect to the PROV data model\cite{w3c-prov-dm}, and serialised using the PROV-N notation\cite{w3c-prov-dm}.
 %
-Table \ref{table:corpus-information} provides key information about the dataset itself.
+Table \ref{tab:corpusinformation} provides key information about the dataset itself.
 %    
 \begin{table}[H]
     \centering
-    \label{table:corpus-information}
     \caption{Information about the PROV corpus.}
+    \label{tab:corpusinformation}
     \begin{tabular}{ | l | r | }
         \hline
         \, \textbf{Data format} \, &\, PROV-N \, \\ \hline
@@ -56,12 +56,12 @@ The dataset represents the relationships and tweets of 1000 twitter users.
 %
 The number of followers per user is assigned randomly, according to a Gamma distribution\footnote{http://en.wikipedia.org/wiki/Gamma\_distribution}.
 %
-Figure \ref{figure:data-model} depicts the anatomies of both the underlying Twitter data model being simulated, and the corresponding PROV representation.
+Figure \ref{fig:datamodel} depicts the anatomies of both the underlying Twitter data model being simulated, and the corresponding PROV representation.
 %
 \begin{figure}
     \includegraphics[width=1.1\textwidth]{figures/data_model}
     \caption{Twitter data model (left) and its PROV representation.}
-    \label{figure:data-model}
+    \label{fig:datamodel}
 \end{figure}
 
 %
@@ -150,9 +150,10 @@ Given these facts, we can usefully continue to produce further Twitter-PROV data
 %
 Each generation varying individual parameters in an attempt to quantify the impact of data with different statistical characteristics, upon provenance management systems.
 %
-\authornote{HF}{V. unhappy with above sentence. I know what I'm trying to say, but the sentence always ends up a huge mouthful...}
 
-%
 Finally, the use of timestamps in the dataset is restricted to \textit{follow} \& \textit{unfollow} activities. This is a result of the complexity involved in calculating correlations between Tweets and Follow relationships over time. However, technical issues not withstanding, this could prove a useful addition to the datasets, and should form the basis for further work.
+
+\bibliographystyle{plain}
+\bibliography{provbench}
 
 \end{document}  

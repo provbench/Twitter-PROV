@@ -1,5 +1,4 @@
-# Project specific
-prov_storage_and_analysis-IPAW14.bib
+*.bib
 
 # use glob syntax.
 syntax: glob
@@ -68,3 +67,6 @@ build.log
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Project specific
+!twitterProv-ProvBench14.pdf
